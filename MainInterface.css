@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  background-image: url("Background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body,
+html {
+  overflow-x: hidden;
+  width: 100%;
+  padding-top: 60px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px; /* Set a specific height */
+
+  /* This keeps items in a row */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* Spacing and Style */
+  padding: 0 2%;
+  padding-right: 5vw;
+  background-color: #412208; /* Your dark brown */
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.nav-group {
+  display: flex;
+  gap: 30px; /* Controls spacing between individual links */
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+.links {
+  display: inline-block;
+  padding-bottom: 0.25rem;
+  position: relative;
+}
+
+.links::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f5f5f5;
+  transition: width 0.25s ease-in-out;
+}
+
+.links:hover:before {
+  width: 100%;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.carousel-container {
+  position: relative;
+  top: 20px;
+  height: 400px;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden; /* Hides the images not currently in view */
+}
+
+.carousel-slide {
+  display: flex;
+  width: 100%; /* Ensure the track is ready for children */
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+  height: 400px;
+  width: 100%; /* EACH image must take up 100% of the carousel-container */
+  flex-shrink: 0; /* Prevents images from squeezing together */
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Button Styling */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.562);
+  border-radius: 1500%;
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.next {
+  right: 10px;
+}
+.prev {
+  left: 10px;
+}
+
+.greetings {
+  position: relative;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  top: 70px;
+  left: 50px;
+  color: white;
+}
+
+.greetings h1 {
+  font-size: 50px;
+  font-weight: 1000;
+}
+
+.greetings p1 {
+  font-size: 25px;
+}
+
+/* Container for the whole grid */
+.menu-grid {
+  position: relative;
+  top: 70px;
+  left: 15px;
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  font-family: "Arial", sans-serif; /* Similar to the clean sans-serif used */
+  overflow-x: auto; /* Allows scrolling if screen is too small */
+}
+
+/* Individual Card Styling */
+.menu-card {
+  background-color: #f7ecdf;
+  border-radius: 12px;
+  width: 14vw;
+  overflow: hidden; /* This clips the image corners to match the card */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Soft shadow like the image */
+  margin: 10px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.menu-card:hover{
+  background-color: #8b4513; /* Maintains the same background color */
+  transform: translateY(-10px); /* Lifts the card up */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Adds a soft depth shadow */
+}
+
+.menu-card:hover .item-name,
+.menu-card:hover .description,
+.menu-card:hover .current-price,
+.menu-card:hover .old-price {
+  align-items: center; /* Centers the price-row and items horizontally */
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Optional: Add a transition to the original classes to make it smooth */
+.item-name,
+.description,
+.current-price,
+.old-price {
+  transition: color 1s ease;
+}
+
+.card-image img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover; /* Ensures the photo fills the space perfectly */
+  display: block;
+}
+
+.card-content {
+  height: 18vh;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.item-name {
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.description {
+  font-family: sans-serif;
+  font-size: 0.85rem;
+  color: #757575;
+  line-height: 1.4;
+  margin: 0 0 8px 0;
+}
+
+.price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.current-price {
+  font-weight: 900;
+  font-size: 1.1rem;
+  color: #000;
+}
+
+.old-price {
+  font-size: 0.8rem;
+  color: #b0b0b0;
+  text-decoration: line-through;
+}
+
+.menu-items {
+  display: flex;
+  gap: 40px; /* Space between the circles */
+  overflow-x: auto; /* Allows scrolling on mobile */
+}
+
+.menu-item {
+  text-align: center;
+  cursor: pointer;
+}
+
+.menu {
+  position: relative;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  top: 70px;
+  left: 50px;
+  color: white;
+  margin-top: 70px;
+}
+
+.menu h1 {
+  font-size: 50px;
+  font-weight: 1000;
+}
+
+.menu p {
+  font-size: 25px;
+}
+
+.item-name1 {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.description1 {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 0.85rem;
+  color: #757575;
+  line-height: 1.4;
+  margin: 0 0 8px 0;
+}
+
+.menu-card:hover .item-name1,
+.menu-card:hover .description1 {
+  color: #ffffff;
+}
+
+.card-link {
+    text-decoration: none; /* Removes the underline */
+    color: inherit;        /* Keeps your original text colors */
+    display: block;        /* Ensures the link covers the whole card area */
+    transition: transform 0.3s ease; /* Optional: adds a smooth feel */
+}
+
+.card-link:hover {
+    cursor: pointer;
+}

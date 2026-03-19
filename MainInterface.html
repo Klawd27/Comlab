@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Page</title>
+    <link rel="stylesheet" href="MainInterface.css">
+    <link rel="icon" type="image/png" href="P.png" />
+    <link rel="stylesheet" href="cartSystem.css">
+    <link rel="stylesheet" href="order.css"/>
+    <link rel="stylesheet" href="menu.css"/>
+  </head>
+  <body>
+
+    
+
+    <nav>
+      <div class="nav-group">
+        <a class="links" href="#" id="homeBt" >HOME</a>
+        <a class="links" href="#">ABOUT</a>
+        <a href="#">Welcome, Administrator.</a>
+      </div>
+
+      <div class="logo">Petals & Pastries Cafe</div>
+
+      <div class="nav-group">
+        <a class="links" id="menuBt">MENU</a>
+        <a class="links" id="openOrder">ORDERS</a>
+        <a class="links" href="../Review Interface/Review.html">REVIEWS</a>
+        <a class="links" href="../Find Us Interface/Find.html">FIND US</a>
+
+        <div id="openBtC" class="cartButtonBox"> 
+            <img src="cart.png" class="cartLogo"/>
+
+            <input id="cartNum" type="text" value="0" readonly="" />
+          </div>
+
+      </div>
+    </nav>
+
+    <div class="home-view"> <!--Home View -->
+
+    <div class="carousel-container">
+      <div class="carousel-slide" id="slideTrack">
+        <img src="Banner1.jpg" />
+        <img src="Banner3.jpg" />
+        <img src="Banner2.jpg" />
+      </div>
+
+      <button class="nav-btn prev" onclick="moveSlide(-1)">❮</button>
+      <button class="nav-btn next" onclick="moveSlide(1)">❯</button>
+    </div>
+
+
+
+
+
+
+    <div class="greetings">
+      <h1>Good Day!</h1>
+      <p>Welcome! Grab a flower and a cup of joy</p>
+    </div>
+
+        <a href="menu" class="card-link"></a>
+    <div class="menu-grid">
+      <article class="menu-card">
+        <div class="card-image">
+          <img src="flat.jpeg" alt="Flat White" />
+        </div>
+
+
+        <!-- Flat White-->
+        <div class="card-content">
+          <h3 class="item-name">Flat White</h3>
+          <p class="description">
+            Espresso-based coffee drink originating from Australia/New Zealand.
+          </p>
+
+          <div class="price-row">
+            <span class="current-price">₱100.00</span>
+            <span class="old-price">₱120.00</span>
+          </div>
+
+        </div> 
+        <div class="Cartsystem">
+              <div onclick="minusQuantity(1)" id="mnD1" class="minBox" > <img src="minus.png" class="imgmin"/> </div>
+              <div onclick="increaseQuantity(1)" id="incD1" class="plusBox"> <img src="plus.png" class="imgplus"/> </div>
+
+              <input id="QD1" type="text" value="1" readonly maxlength="1" class="quantityDisplay"/>
+              <button onclick="order(1, 'prod1')"id="order1" class="orderBt"> Add </button>
+
+          </div><!-- Flat WHite-->
+
+      </article>
+
+
+
+
+      <!-- Cafe Au' Lait-->
+      <article class="menu-card">
+        <div class="card-image">
+          <img src="lat.jpeg" alt="Cafe Au' Lait" />
+        </div>
+
+        <div class="card-content">
+          <h3 class="item-name">Cafe Au' Lait</h3>
+          <p class="description">
+            A traditional European breakfast beverage consisting of strong, hot
+            brewed coffee mixed with scalded or steamed milk.
+          </p>
+
+          <div class="price-row">
+            <span class="current-price">₱100.00</span>
+            <span class="old-price">₱120.00</span>
+          </div>
+        </div> 
+
+        <div class="Cartsystem">
+              <div onclick="minusQuantity(2)" id="mnD2" class="minBox" > <img src="minus.png" class="imgmin"/> </div>
+              <div onclick="increaseQuantity(2)" id="incD2" class="plusBox"> <img src="plus.png" class="imgplus"/> </div>
+
+              <input id="QD2" type="text" value="1" maxlength="2" readonly class="quantityDisplay"/>
+              <button onclick="order(2, 'prod2')" id="order2" class="orderBt"> Add </button>
+          </div>
+
+        <!-- Cafe Au' Lait -->
+
+      </article>
+
+
+
+
+      <!-- Lyly-->
+      <article class="menu-card">
+        <div class="card-image">
+          <img src="lily.jpeg" alt="Lily" />
+        </div>
+
+        <div class="card-content">
+          <h3 class="item-name">Lily</h3>
+          <p class="description">
+            a delicate expression of elegance, featuring soft blush lilies that
+            bring serenity and joy to any space.
+          </p>
+
+          <div class="price-row">
+            <span class="current-price">₱100.00</span>
+            <span class="old-price">₱120.00</span>
+          </div>
+        </div>
+
+        <div class="Cartsystem">
+              <div onclick="minusQuantity(3)" id="mnD3" class="minBox" > <img src="minus.png" class="imgmin"/> </div>
+              <div onclick="increaseQuantity(3)" id="incD3" class="plusBox"> <img src="plus.png" class="imgplus"/> </div>
+
+              <input id="QD3" type="text" value="1" maxlength="2" readonly class="quantityDisplay"/>
+              <button onclick="order(3, 'prod3')" id="order3" class="orderBt"> Add </button>
+          </div>
+      </article> <!-- Lyly-->
+
+
+
+
+      <!-- Croissant-->
+      <article class="menu-card">
+        <div class="card-image">
+          <img src="croi.jpeg" alt="Croissant" />
+        </div>
+
+        <div class="card-content">
+          <h3 class="item-name">Croissant</h3>
+          <p class="description">
+            a laminated, yeast-leavened bakery product that contains
+            dough/roll-in fat layers to create a flaky, crispy texture.
+          </p>
+
+          <div class="price-row">
+            <span class="current-price">₱100.00</span>
+            <span class="old-price">₱120.00</span>
+          </div>
+        </div>
+
+        <div class="Cartsystem">
+              <div onclick="minusQuantity(4)" id="mnD4" class="minBox" > <img src="minus.png" class="imgmin"/> </div>
+              <div onclick="increaseQuantity(4)" id="incD4" class="plusBox"> <img src="plus.png" class="imgplus"/> </div>
+
+              <input id="QD4" type="text" value="1" maxlength="2" readonly class="quantityDisplay"/>
+              <button onclick="order(4, 'prod4')" id="order4" class="orderBt"> Add </button>
+          </div>
+      </article> <!-- Croissant-->
+
+
+
+
+      <!-- Rose-->
+      <article class="menu-card">
+        <div class="card-image">
+          <img src="rose.jpeg" alt="Rose" />
+        </div>
+
+        <div class="card-content">
+          <h3 class="item-name">Rose</h3>
+          <p class="description">
+            The flowers of wild roses usually have five petals, whereas the
+            flowers of cultivated roses are often double (i.e., with multiple
+            sets of petals).
+          </p>
+
+          <div class="price-row">
+            <span class="current-price">₱100.00</span>
+            <span class="old-price">₱120.00</span>
+          </div>
+        </div>
+
+
+          <div class="Cartsystem">
+              <div onclick="minusQuantity(5)" id="mnD5" class="minBox" > <img src="minus.png" class="imgmin"/> </div>
+              <div onclick="increaseQuantity(5)" id="incD5" class="plusBox"> <img src="plus.png" class="imgplus"/> </div>
+
+              <input id="QD5" type="text" value="1" maxlength="2" readonly class="quantityDisplay"/>
+              <button onclick="order(5, 'prod5')" id="order5" class="orderBt"> Add </button>
+          </div>
+      </article> <!-- Rose-->
+
+
+
+
+
+      <!-- Buche de Noel -->
+      <article class="menu-card">
+        <div class="card-image">
+          <img src="buche.jpeg" alt="Buche de Noel" />
+        </div>
+
+        <div class="card-content">
+          <h3 class="item-name">Buche de Noel</h3>
+          <p class="description">
+            a génoise sponge cake rolled with a luscious buttercream filling and
+            frosted to resemble tree bark.
+          </p>
+
+          <div class="price-row">
+            <span class="current-price">₱100.00</span>
+            <span class="old-price">₱120.00</span>
+          </div>
+        </div>
+
+        <div class="Cartsystem">
+              <div onclick="minusQuantity(6)" id="mnD6" class="minBox" > <img src="minus.png" class="imgmin"/> </div>
+              <div onclick="increaseQuantity(6)" id="incD6" class="plusBox"> <img src="plus.png" class="imgplus"/> </div>
+
+              <input id="QD6" type="text" value="1" maxlength="2" readonly class="quantityDisplay"/>
+               <button onclick="order(6, 'prod6')" id="order6" class="orderBt"> Add </button>
+          </div>                                                                                              der(6, 'prod6')" id="order6" class="orderBt"> Add </button>
+          
+      </article><!-- Buche de Noel -->
+    </div>
+    </a>
+
+          
+
+    <div class="menu">
+      <h1>MENU</h1>
+      <p>What do you want today?</p>
+    </div>
+
+    <a id="menubt2" class="card-link">
+      <div class="menu-grid">
+        <article class="menu-card">
+          <div class="card-image">
+            <img src="flow.jpeg" alt="Flowers" />
+          </div>
+
+          <div class="card-content">
+            <h3 class="item-name1">Flowers</h3>
+            <p class="description1">
+              Don't wait for someone to bring you flowers. 
+              Plant your own garden and decorate your own soul.
+            </p>
+          </div>
+        </article>
+      </div>
+    </a>
+</div> <!-- Homeview-->
+
+
+<div class="menu-view">
+
+
+
+</div>
+
+    <div class="invisibleBox"> </div>
+    <div class="orderContainer">
+
+        <ul id="orderHistory"> </ul>
+
+    </div>
+
+
+    <div id="cartBox" class="cartContainer">
+
+      <div id="prod1" class="products">
+          <div class="prodT"> 
+
+            <img src="flat.jpeg" class="imp" />
+            <input onclick="totalAmmount(1)" id="PT1" class="totalProd" value="₱100.00" type="text" readonly>
+            <input class="priceTag" value="₱100.00" type="text" readonly>
+            <input onclick="finalQuantityDisplay(1)" id="finalQ1" class="finalQuantity" value="1" readonly type="text" >
+            <button onclick="minusQuantityCart(1, 'prod1', 'prod1-show')" id="finalmin1" class="minusFinal" > Min. </button>
+            <button onclick="addQuantityCart(1, 'prod1', 'prod1-show')" id="finaladd1" class="addFinal" > Add. </button>
+          </div>
+
+          
+
+      </div>
+
+      <div id="prod2" class="products">
+          <div class="prodT"> 
+
+              <img src="lat.jpeg" class="imp"/>
+
+              <input id="PT2" class="totalProd" value="₱100.00" type="text" readonly>
+              <input class="priceTag" value="₱100.00" type="text" readonly>
+              <input onclick="finalQuantityDisplay(2)" id="finalQ2" class="finalQuantity" value="1" readonly type="text" >
+              <button onclick="minusQuantityCart(2, 'prod2', 'prod2-show')" id="finalmin2" class="minusFinal" > Min. </button>
+              <button onclick="addQuantityCart(2, 'prod2', 'prod2-show')" id="finaladd2" class="addFinal" > Add. </button>
+
+          </div>
+
+      </div>
+
+      <div id="prod3" class="products">
+          <div class="prodT"> 
+
+              <img src="lily.jpeg" class="imp" />
+
+              <input id="PT3" class="totalProd" value="₱100.00" type="text" readonly>
+              <input class="priceTag" value="₱100.00" type="text" readonly>
+              <input onclick="finalQuantityDisplay(3)" id="finalQ3" class="finalQuantity" value="1" readonly type="text" >
+              <button onclick="minusQuantityCart(3, 'prod3', 'prod3-show')" id="finalmin3" class="minusFinal" > Min. </button>
+              <button onclick="addQuantityCart(3, 'prod3', 'prod3-show')" id="finaladd3" class="addFinal" > Add. </button>
+
+          </div>
+
+      </div>
+
+      <div id="prod4" class="products">
+          <div class="prodT"> 
+
+              <img src="croi.jpeg" class="imp" />
+
+              <input id="PT4" class="totalProd" value="₱100.00" type="text" readonly>
+              <input class="priceTag" value="₱100.00" type="text" readonly>
+              <input onclick="finalQuantityDisplay(4)" id="finalQ4" class="finalQuantity" value="1" readonly type="text" >
+              <button onclick="minusQuantityCart(4, 'prod4', 'prod4-show')" id="finalmin4" class="minusFinal" > Min. </button>
+              <button onclick="addQuantityCart(4, 'prod4', 'prod4-show')" id="finaladd4" class="addFinal" > Add. </button>
+          </div>
+
+      </div>
+
+      <div id="prod5" class="products">
+          <div class="prodT"> 
+
+                <img src="rose.jpeg" class="imp" />
+
+              <input id="PT5" class="totalProd" value="₱100.00" type="text" readonly>
+              <input class="priceTag" value="₱100.00" type="text" readonly>
+              <input onclick="finalQuantityDisplay(5)" id="finalQ5" class="finalQuantity" value="1" readonly type="text" >
+              <button onclick="minusQuantityCart(5, 'prod5', 'prod5-show')" id="finalmin5" class="minusFinal" > Min. </button>
+              <button onclick="addQuantityCart(5, 'prod5', 'prod5-show')" id="finaladd5" class="addFinal" > Add. </button>
+          </div>
+
+      </div>
+
+      <div id="prod6" class="products">
+          <div class="prodT"> 
+
+            <img src="buche.jpeg" class="imp" />
+
+              <input id="PT6" class="totalProd" value="₱100.00" type="text" readonly>
+              <input class="priceTag" value="₱100.00" type="text" readonly>
+              <input onclick="finalQuantityDisplay(6)" id="finalQ6" class="finalQuantity" value="1" readonly type="text" >
+              <button onclick="minusQuantityCart(6, 'prod6', 'prod6-show')" id="finalmin6" class="minusFinal" > Min. </button>
+              <button onclick="addQuantityCart(6, 'prod6', 'prod6-show')" id="finaladd6" class="addFinal" > Add. </button>
+          </div>
+
+      </div>
+
+            <div class="totalBox"> 
+
+              <input id="subTotal" type="text" readonly value="Subtotal: ₱0.00">
+              <input id="deliveryFee" type="text" readonly value="Delivery: ₱0.00"> 
+
+              <button onclick="checkout()" id="checkOut"> Check out</button>
+              <input id="totalCheck" type="text" value="Total Amount: ₱0.00" readonly>
+            </div>
+            <button id="closeCart"> x </button>
+    </div>
+
+     <div class="afterInvBox2"> </div>
+
+            <div class="checkoutConMain">
+
+              <div id="loading"> 
+
+              </div>
+
+              <input type="text" value="Great news! Order’s on the way." readonly class="text1">
+              <input type="text" value="Thanks for ordering! See you soon!" readonly class="text2">
+
+              <button class="closeCon"> Close </button>
+
+              </div>
+  
+
+      
+
+
+    <script src="MainInterface.js"></script>
+
+
+    
+  </body>
+
+  <script src="cartSystem.js"></script>
+  <script src="button.js"></script>
+</html>

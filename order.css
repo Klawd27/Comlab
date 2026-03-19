@@ -1,0 +1,19 @@
+.orderContainer{
+	position: fixed;
+	right:-100vw;
+	top:10vh;
+	width: 35vw;
+	height:87vh;
+	background-color:rgb(220,220,220);
+	opacity: 0;
+	transition: opacity 0.30s ease-in, right 0.25s ease-in-out;
+}
+
+.orderContainer-show{
+	opacity: 1;
+	right:2vw;
+}
+
+#openOrder{
+	cursor:pointer;
+}

@@ -1,0 +1,17 @@
+.home-view{
+	position: absolute;
+	left:0vw;
+	opacity: 1;
+	pointer-events: auto;
+	transition: opacity 0.20s ease-in-out, left 0.35s ease-in-out;
+}
+
+.home-view-show{
+	opacity: 0;
+	pointer-events: none;
+	left:-100vw;
+}
+
+#menuBt{
+	cursor:pointer;
+}
