@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Reviews</title>
+    <link rel="icon" type="image/png" href="P.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-group">
+        <a class="links" href="../Main Interface/MainInterface.html">HOME</a>
+        <a class="links" href="#">ABOUT</a>
+        <a href="#">Welcome, Administrator.</a>
+      </div>
+
+      <div class="logo">Petals & Pastries Cafe</div>
+
+      <div class="nav-group">
+        <a class="links" href="../Review Interface/Review.html">REVIEWS</a>
+        <a class="links" href="../Find Us Interface/Find.html">FIND US</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1 class="main-title">REVIEWS</h1>
+
+      <div class="feedback-section">
+        <div class="feedback-card">
+          <h3>Share Your Experience</h3>
+          <form id="reviewForm">
+            <div class="input-group">
+              <input
+                type="email"
+                id="userEmail"
+                placeholder="Your Email"
+                required
+              />
+              <select id="userRating">
+                <option value="5">★★★★★</option>
+                <option value="4">★★★★☆</option>
+                <option value="3">★★★☆☆</option>
+                <option value="2">★★☆☆☆</option>
+                <option value="1">★☆☆☆☆</option>
+              </select>
+            </div>
+            <textarea
+              id="userText"
+              placeholder="Write your review here..."
+              rows="3"
+              required
+            ></textarea>
+            <button type="submit">Submit Review</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="reviews-grid" id="reviewsGrid">
+        <div class="review-card">
+          <div class="profile-icon"></div>
+          <span class="email">Akotosinatoy123@gmail.com</span>
+          <div class="stars">★★★★★</div>
+          <p class="review-text">
+            Absolutely incredible service! From start to finish, everything was
+            seamless, and the team went above and beyond to make sure I was
+            satisfied. Highly recommended!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

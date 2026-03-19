@@ -1,0 +1,268 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 5vw;
+  padding-left: 2vw;
+  background-color: #412208;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.nav-group {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+.links {
+  display: inline-block;
+  padding-bottom: 0.25rem;
+  position: relative;
+}
+
+.links::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f5f5f5;
+  transition: width 0.25s ease-in-out;
+}
+
+.links:hover:before {
+  width: 100%;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+body {
+  background-image: url("Background.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  max-width: 1300px;
+  width: 85%;
+  margin: 0 auto;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 3.5rem;
+  letter-spacing: 0.6rem;
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: min-content;
+  gap: 15px;
+  width: 100%;
+  align-items: start;
+}
+
+.review-card {
+  position: relative;
+  background: rgba(109, 109, 109, 0.185);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  padding: 25px 20px 45px 20px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.review-card:hover {
+  background: rgba(109, 109, 109, 0.5);
+  transform: translateY(-5px);
+}
+
+.profile-icon {
+  width: 45px;
+  height: 45px;
+  background-color: #707070;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+}
+
+.email {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.stars {
+  color: #d4a756;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.review-text {
+  font-size: 0.9rem;
+  color: #ffffff;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.feedback-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.feedback-card {
+  background: rgba(109, 109, 109, 0.25);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  padding: 30px;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.feedback-card h3 {
+  color: #ffffff;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.input-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.input-group input,
+.input-group select {
+  flex: 1;
+}
+
+.feedback-card input,
+.feedback-card textarea,
+.feedback-card select {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 12px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.feedback-card textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  resize: none;
+}
+
+.feedback-card button {
+  background: #d4a756;
+  color: #412208;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+
+.feedback-card button:hover {
+  background: #ffffff;
+  transform: scale(1.05);
+}
+
+#userRating {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 10px;
+  cursor: pointer;
+  appearance: none;
+}
+
+#userRating option {
+  background-color: #412208;
+  color: white;
+  padding: 10px;
+}
+
+#userRating:focus {
+  outline: none;
+  border-color: #d4a756;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.feedback-card input::placeholder,
+.feedback-card textarea::placeholder {
+  color: rgba(255, 255, 255, 0.9);
+  opacity: 1;
+  font-weight: 400;
+}
+
+.feedback-card input:focus::placeholder,
+.feedback-card textarea:focus::placeholder {
+  color: #ffffff;
+}
+
+.card-footer {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+}
+
+.timestamp {
+  font-size: 0.75rem;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
