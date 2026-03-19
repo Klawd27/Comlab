@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login UI</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="P.png" />
+  </head>
+  <body>
+    <div class="wrapper" id="wrapper">
+      <!-- FORMS AREA -->
+      <div class="forms">
+        <form class="form register">
+          <h2>Sign Up</h2>
+          <div class="form-field">
+            <input id="signup-username" type="text" placeholder=" " />
+            <label for="signup-username">Username</label>
+          </div>
+          <div class="form-field">
+            <input id="signup-email" type="email" placeholder=" " />
+            <label for="signup-email">Email</label>
+          </div>
+          <div class="form-field">
+            <input id="signup-password" type="password" placeholder=" " />
+            <label for="signup-password">Password</label>
+          </div>
+          <a
+            id="lagen"
+            href="../Main Interface/MainInterface.html"
+            type="button"
+            >Sign Up</a
+          >
+
+          <div class="social-box">
+            <p>or sign up with social platforms</p>
+            <div class="icons">
+              <div class="icons">
+                <a href="https://google.com" target="_blank"
+                  ><i class="fab fa-google" fa-3x></i
+                ></a>
+                <a href="https://facebook.com" target="_blank"
+                  ><i class="fab fa-facebook-f" fa-3x></i
+                ></a>
+                <a href="https://instagram.com" target="_blank"
+                  ><i class="fab fa-instagram" fa-3x></i
+                ></a>
+                <a href="https://whatsapp.com" target="_blank"
+                  ><i class="fab fa-whatsapp" fa-3x></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <form class="form login">
+          <h2>Login</h2>
+          <div class="form-field">
+            <input id="login-username" type="text" placeholder=" " />
+            <label for="login-username">Username</label>
+          </div>
+          <div class="form-field">
+            <input id="login-password" type="password" placeholder=" " />
+            <label for="login-password">Password</label>
+          </div>
+          <a class="forgot">Forgot Password?</a>
+          <a id="lagen" href="../Main Interface/MainInterface.html" type="button">Log In</a>
+
+          <div class="social-box">
+            <p>or login with social platforms</p>
+            <div class="icons">
+              <div class="icons">
+                <a href="https://google.com" target="_blank"
+                  ><i class="fab fa-google" fa-3x></i
+                ></a>
+                <a href="https://facebook.com" target="_blank"
+                  ><i class="fab fa-facebook-f" fa-3x></i
+                ></a>
+                <a href="https://instagram.com" target="_blank"
+                  ><i class="fab fa-instagram" fa-3x></i
+                ></a>
+                <a href="https://whatsapp.com" target="_blank"
+                  ><i class="fab fa-whatsapp" fa-3x></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- OVERLAY PANEL -->
+      <div class="overlay">
+        <div class="overlay-content">
+          <img src="aLogo.png" alt="Logo" />
+          <h1 id="title">Hello, Welcome</h1>
+          <p id="text">Already have an account?</p>
+          <button id="switch">Log In</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
